@@ -1,0 +1,26 @@
+.navigationBar {
+  display: flex;
+  flex-direction: row;
+  gap: $spacing * 7;
+}
+
+.navigationBar a {
+  color: $black;
+  font-size: $medium-font-size;
+  text-decoration: none;
+}
+
+.navigationBar a.active {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+  .navigationBar {
+    gap: $spacing * 3;
+    text-transform: uppercase;
+  }
+
+  .navigationBar a {
+    font-size: 12px;
+  }
+}

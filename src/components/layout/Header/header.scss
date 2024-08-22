@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacing * 6 $desktop-margin;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: $mobile-margin;
+    align-items: center;
+  }
+}
