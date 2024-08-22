@@ -11,3 +11,6 @@ body {
 }
 
 @import "./variables.scss";
+@import "../components/layout/Header/header.scss";
+@import "../components/layout/NavigationBar/navigationBar.scss";
+@import "../components/layout/Logo/HeaderLogo/headerLogo.scss";
