@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing * 4;
+  align-items: center;
+  padding: $spacing * 8 0px $spacing * 4 0px;
+  background-color: $black;
+
+  &__copyright {
+    color: $white;
+    font-size: $large-font-size;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: $spacing * 8 0px $spacing * 7 0px;
+    gap: $spacing * 2;
+
+    &__copyright {
+      font-size: 12px;
+    }
+  }
+}
