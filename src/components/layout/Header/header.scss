@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: $spacing * 6 $desktop-margin;
+  padding: $spacing * 6 $desktop-margin 0 $desktop-margin;
 }
 
 @media screen and (max-width: 767px) {

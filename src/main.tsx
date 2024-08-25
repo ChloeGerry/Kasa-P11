@@ -9,8 +9,8 @@ import "./style/index.scss";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <Routing />
       <Header />
+      <Routing />
       <Footer />
     </BrowserRouter>
   </StrictMode>
