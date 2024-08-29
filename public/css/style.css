@@ -157,6 +157,43 @@ body {
   }
 }
 
+.error__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ff6060;
+}
+
+.error__404 {
+  margin: 186px 0px 64px 0px;
+}
+
+.error__text {
+  font-size: 36px;
+  text-align: center;
+}
+
+.error__homepageLink {
+  color: var(---primary-color);
+  margin: 182px 0px 159px 0px;
+  font-size: var(---18px-fontSize);
+}
+
+@media screen and (max-width: 767px) {
+  .error__404 {
+    width: 198px;
+    height: 99px;
+    margin: 186px 0px 16px 0px;
+  }
+  .error__text {
+    font-size: 18px;
+  }
+  .error__homepageLink {
+    font-size: 14px;
+    margin: 133px 0px 235px 0px;
+  }
+}
 .footer {
   display: flex;
   flex-direction: column;

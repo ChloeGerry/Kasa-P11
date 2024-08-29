@@ -1,0 +1,40 @@
+.error {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $primary-color;
+  }
+
+  &__image {
+    margin: 136px 0px;
+
+    @media screen and (max-width: 767px) {
+      width: 198px;
+      height: 99px;
+      margin: 112px 0px;
+    }
+  }
+
+  &__text {
+    font-size: 36px;
+    text-align: center;
+    margin: 0px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+
+  &__homePageLink {
+    color: $black;
+    margin: 136px 0px;
+    font-size: $medium-font-size;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      margin: 112px 0px;
+    }
+  }
+}
