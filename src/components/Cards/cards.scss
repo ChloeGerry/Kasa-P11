@@ -1,0 +1,23 @@
+.cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $spacing * 7;
+  margin: $spacing * 5 $desktop-margin;
+  padding: $spacing * 7 48px;
+  background-color: $secondary-color;
+  border-radius: $desktop-border-radius;
+
+  @media screen and (max-width: 767px) {
+    gap: $spacing * 3;
+    background-color: $white;
+    margin: 0px;
+    padding: $spacing * 3 $mobile-margin;
+  }
+}
+
+.card__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}

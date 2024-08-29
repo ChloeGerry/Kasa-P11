@@ -1,0 +1,23 @@
+.card__image {
+  width: 340px;
+  height: 340px;
+  border-radius: $mobile-border-radius;
+  object-fit: cover;
+
+  @media screen and (max-width: 767px) {
+    height: 255px;
+    width: 100%;
+  }
+}
+
+.card__title {
+  position: absolute;
+  font-size: $medium-font-size;
+  color: $white;
+  margin: 0px 0px $spacing * 2 $spacing * 2;
+  width: 20%;
+
+  @media screen and (max-width: 767px) {
+    width: 45%;
+  }
+}
