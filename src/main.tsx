@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import Header from "./components/layout/Header/index.tsx";
 import Footer from "./components/layout/Footer/index.tsx";
 import Routing from "./Routing.tsx";
-import "./style/index.scss";
+import "./sass/style.scss";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

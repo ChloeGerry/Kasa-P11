@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   font-family: Montserrat, sans-serif;
@@ -7,7 +7,8 @@
 }
 
 body {
-  margin: 0;
+  max-width: 1440px;
+  margin: 0px auto;
 }
 
 @import "./variables.scss";
@@ -15,4 +16,6 @@ body {
 @import "../components/layout/NavigationBar/navigationBar.scss";
 @import "../components/layout/Logo/HeaderLogo/headerLogo.scss";
 @import "../components/Banner/banner.scss";
+@import "../components/Cards/cards.scss";
+@import "../components/Card/card.scss";
 @import "../components/layout/Footer/footer.scss";
