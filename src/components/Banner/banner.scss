@@ -39,11 +39,10 @@
     position: absolute;
     color: $white;
     margin: 0;
-    text-shadow: #00000040 0px 0px 2px;
+    text-shadow: $black 0px 0px 2px;
 
     @media screen and (max-width: 930px) {
-      width: 59%;
-      padding-right: $spacing * 8;
+      width: 60%;
     }
 
     @media screen and (max-width: 767px) {
