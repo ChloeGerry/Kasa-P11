@@ -1,27 +1,23 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "@/components/Card";
-import { Housing } from "./types";
+import { Housing } from "@/hooks/types";
 
-const Cards = () => {
-  const [housings, setHousings] = useState<Housing[]>([]);
+type CardsProps = {
+  housings: Housing[] | null;
+};
 
-  useEffect(() => {
-    fetch("housings.json")
-      .then((result) => result.json())
-      .then((housings) => setHousings(housings))
-      .catch((error) => console.log("Error when fetching housings", error));
-  }, []);
-
+const Cards = ({ housings }: CardsProps) => {
   return (
     <section className="cards__wrapper">
-      {housings.map(({ id, title, cover }) => (
-        <article key={id}>
-          <Link to={`/housing/${id}`} className="card__wrapper">
-            <Card cover={cover} title={title} />
-          </Link>
-        </article>
-      ))}
+      {!housings && <p>Il n'y a pas de logements à afficher</p>}
+      {housings &&
+        housings.map(({ id, title, cover }) => (
+          <article key={id}>
+            <Link to={`/housing/${id}`} className="card__wrapper">
+              <Card cover={cover} title={title} />
+            </Link>
+          </article>
+        ))}
     </section>
   );
 };
