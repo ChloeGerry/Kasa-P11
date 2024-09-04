@@ -1,0 +1,96 @@
+.collapse {
+  width: 70%;
+
+  @media screen and (max-width: 1150px) {
+    width: 100%;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: $primary-color;
+    padding: $spacing $spacing $spacing $spacing * 2;
+    font-weight: 700;
+  }
+
+  &__title {
+    color: $white;
+    margin: 0;
+  }
+
+  &__arrow {
+    cursor: pointer;
+
+    @media screen and (max-width: 1150px) {
+      width: 9px;
+      height: 16px;
+    }
+  }
+
+  &__text-wrapper {
+    background-color: $secondary-color;
+    position: relative;
+    top: -8px;
+    z-index: -1;
+  }
+
+  &__text {
+    color: $black;
+    margin: 0;
+    font-size: $medium-font-size;
+
+    @media screen and (max-width: 1150px) {
+      font-size: 12px;
+    }
+  }
+
+  &__wrapper--medium &__title-wrapper {
+    border-radius: $mobile-border-radius;
+
+    @media screen and (max-width: 1150px) {
+      border-radius: 5px;
+      height: 30px;
+    }
+  }
+
+  &__wrapper--medium &__title {
+    font-size: $medium-font-size;
+  }
+
+  &__wrapper--medium &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__wrapper--medium &__text-wrapper {
+    padding: $spacing * 5 $spacing $spacing $spacing * 2;
+    height: 209px;
+    border-radius: $mobile-border-radius;
+
+    @media screen and (max-width: 1150px) {
+      padding: $spacing * 2 $spacing $spacing $spacing;
+      border-radius: 5px;
+      height: 119px;
+    }
+  }
+
+  &__wrapper--large &__title-wrapper,
+  &__wrapper--large &__text-wrapper {
+    border-radius: 5px;
+  }
+
+  &__wrapper--large &__title {
+    font-size: $large-font-size;
+
+    @media screen and (max-width: 1150px) {
+      font-size: 13px;
+    }
+  }
+
+  &__wrapper--large &__text-wrapper {
+    padding: $spacing * 3 $spacing * 2 $spacing * 2 $spacing * 2;
+  }
+}
