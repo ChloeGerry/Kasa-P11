@@ -79,7 +79,6 @@ body {
   height: 223px;
   object-fit: cover;
   border-radius: 25px;
-  filter: brightness(40%);
 }
 @media screen and (max-width: 767px) {
   .banner__image {
@@ -88,17 +87,22 @@ body {
     height: 111px;
   }
 }
+.banner__image--darken {
+  filter: brightness(40%);
+}
+.banner__image--enlighten {
+  filter: brightness(70%);
+}
 .banner__title {
   font-size: 48px;
   position: absolute;
   color: #fff;
   margin: 0;
-  text-shadow: rgba(0, 0, 0, 0.2509803922) 0px 0px 2px;
+  text-shadow: #000 0px 0px 2px;
 }
 @media screen and (max-width: 930px) {
   .banner__title {
-    width: 59%;
-    padding-right: 64px;
+    width: 60%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -110,6 +114,7 @@ body {
 .cards__wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 56px;
   margin: 40px 100px;
   padding: 56px 48px;
@@ -164,36 +169,145 @@ body {
   justify-content: center;
   color: #ff6060;
 }
-
-.error__404 {
-  margin: 186px 0px 64px 0px;
+.error__image {
+  margin: 136px 0px;
 }
-
+@media screen and (max-width: 767px) {
+  .error__image {
+    width: 198px;
+    height: 99px;
+    margin: 112px 0px;
+  }
+}
 .error__text {
   font-size: 36px;
   text-align: center;
+  margin: 0px;
 }
-
-.error__homepageLink {
-  color: var(---primary-color);
-  margin: 182px 0px 159px 0px;
-  font-size: var(---18px-fontSize);
-}
-
 @media screen and (max-width: 767px) {
-  .error__404 {
-    width: 198px;
-    height: 99px;
-    margin: 186px 0px 16px 0px;
-  }
   .error__text {
     font-size: 18px;
   }
-  .error__homepageLink {
+}
+.error__homePageLink {
+  color: #000;
+  margin: 136px 0px;
+  font-size: 18px;
+}
+@media screen and (max-width: 767px) {
+  .error__homePageLink {
     font-size: 14px;
-    margin: 133px 0px 235px 0px;
+    margin: 112px 0px;
   }
 }
+
+.collapse {
+  width: 70%;
+}
+@media screen and (max-width: 1150px) {
+  .collapse {
+    width: 100%;
+  }
+}
+.collapse__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #ff6060;
+  padding: 8px 8px 8px 16px;
+  font-weight: 700;
+}
+.collapse__title {
+  color: #fff;
+  margin: 0;
+}
+@media screen and (max-width: 1150px) {
+  .collapse__title {
+    font-size: 13px;
+  }
+}
+.collapse__arrow {
+  cursor: pointer;
+}
+@media screen and (max-width: 1150px) {
+  .collapse__arrow {
+    width: 9px;
+    height: 15px;
+  }
+}
+.collapse__text-wrapper {
+  background-color: #f6f6f6;
+}
+.collapse__text {
+  color: #000;
+  margin: 0;
+  font-size: 18px;
+}
+@media screen and (max-width: 1150px) {
+  .collapse__text {
+    font-size: 12px;
+  }
+}
+.collapse__wrapper--medium .collapse__title-wrapper {
+  border-radius: 10px;
+}
+@media screen and (max-width: 1150px) {
+  .collapse__wrapper--medium .collapse__title-wrapper {
+    border-radius: 5px;
+    height: 30px;
+  }
+}
+.collapse__wrapper--medium .collapse__title {
+  font-size: 18px;
+}
+.collapse__wrapper--medium .collapse__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.collapse__wrapper--medium .collapse__text-wrapper {
+  padding: 40px 8px 8px 16px;
+  height: 209px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1150px) {
+  .collapse__wrapper--medium .collapse__text-wrapper {
+    padding: 16px 8px 8px 8px;
+    border-radius: 5px;
+    padding: 24px 8px 8px 8px;
+    height: 119px;
+  }
+}
+.collapse__wrapper--large .collapse__title-wrapper, .collapse__wrapper--large .collapse__text-wrapper {
+  border-radius: 5px;
+}
+.collapse__wrapper--large .collapse__title {
+  font-size: 24px;
+}
+.collapse__wrapper--large .collapse__text-wrapper {
+  padding: 24px 16px 16px 16px;
+}
+@media screen and (max-width: 1150px) {
+  .collapse__wrapper--large .collapse__text-wrapper {
+    padding: 24px 8px 48px 8px;
+  }
+}
+
+.collapses__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 32px 24px;
+}
+@media screen and (max-width: 767px) {
+  .collapses__wrapper {
+    padding: 16px 24px;
+    gap: 24px;
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: column;
