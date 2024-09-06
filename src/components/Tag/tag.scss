@@ -1,0 +1,23 @@
+.housing__tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 15px;
+  background-color: $primary-color;
+  width: 115px;
+  color: $white;
+  padding: $spacing $spacing * 2;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .housing__tag {
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 4px 4px;
+    margin: 0px;
+  }
+}
