@@ -1,4 +1,4 @@
-export type Housing = {
+export type HousingType = {
   id: string;
   title: string;
   cover: string;
