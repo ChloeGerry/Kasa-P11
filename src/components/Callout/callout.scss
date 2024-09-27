@@ -1,0 +1,17 @@
+.callout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #61c2cb;
+  padding: $spacing * 2 $spacing * 4;
+  border-radius: 5px;
+  width: fit-content;
+
+  &__text,
+  &__link {
+    color: $white;
+    margin: 0px;
+    font-size: $medium-font-size;
+    font-weight: 500;
+  }
+}
