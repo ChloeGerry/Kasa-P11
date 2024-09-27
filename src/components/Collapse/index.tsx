@@ -2,7 +2,7 @@ import { useState } from "react";
 
 type CollapseProps = {
   title: string;
-  text: string;
+  text: string | string[];
   size: "medium" | "large";
 };
 
@@ -41,7 +41,15 @@ const Collapse = ({ title, text, size }: CollapseProps) => {
       </div>
       {isOpen && (
         <div className="collapse__text-wrapper">
-          <div className="collapse__text">{text}</div>
+          {Array.isArray(text) ? (
+            text.map((equipment: string, index: number) => (
+              <p className="collapse__text" key={`${index}-${equipment}`}>
+                {equipment}
+              </p>
+            ))
+          ) : (
+            <p className="collapse__text">{text}</p>
+          )}
         </div>
       )}
     </article>
