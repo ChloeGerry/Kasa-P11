@@ -1,0 +1,141 @@
+.housing {
+  padding: $spacing * 3 $desktop-margin $spacing * 6 $desktop-margin;
+
+  @media screen and (max-width: 767px) {
+    padding: $spacing * 2 $mobile-margin $spacing * 3 $mobile-margin;
+  }
+
+  &__callout--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 233px 0px;
+    gap: $spacing * 2;
+  }
+
+  &__callout--link {
+    font-size: $medium-font-size;
+    text-decoration: underline;
+    color: $black;
+  }
+
+  &__informations {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0px;
+
+    @media screen and (max-width: 767px) {
+      font-size: $medium-font-size;
+    }
+  }
+
+  &__location {
+    font-size: $medium-font-size;
+    padding: $spacing 0px $spacing * 3 0px;
+    margin: 0px;
+    font-weight: 500;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      padding: $spacing 0px;
+    }
+  }
+
+  &__tags--wrapper {
+    display: flex;
+    gap: $spacing;
+    padding: 0px 0px $spacing * 3 0px;
+
+    @media (max-width: 1150px) and (min-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__host {
+    display: flex;
+    align-items: center;
+    padding-bottom: $spacing * 2;
+    gap: $spacing;
+
+    @media screen and (max-width: 767px) {
+      justify-content: flex-end;
+      padding-bottom: 0px;
+    }
+  }
+
+  &__host--name {
+    color: $primary-color;
+    font-size: $medium-font-size;
+    text-align: end;
+    width: 50%;
+    font-weight: 500;
+    margin: 0px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 12px;
+    }
+  }
+
+  &__host--picture {
+    width: $spacing * 8;
+    height: $spacing * 8;
+    border-radius: 50%;
+
+    @media screen and (max-width: 767px) {
+      width: $spacing * 4;
+      height: $spacing * 4;
+    }
+  }
+
+  &__icon--wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing;
+  }
+
+  &__collapse--wrapper {
+    display: flex;
+    justify-content: center;
+    gap: $spacing * 9;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      gap: $spacing * 3;
+    }
+  }
+
+  &__hostAndRating--wrapper {
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: $spacing * 2;
+    }
+  }
+
+  &__stars--wrapper {
+    display: flex;
+    gap: $spacing;
+
+    @media screen and (max-width: 767px) {
+      gap: 6px;
+    }
+  }
+
+  &__collapse {
+    @media screen and (max-width: 767px) {
+      font-size: 13px;
+    }
+  }
+}
