@@ -48,12 +48,21 @@
     margin: 0;
     text-shadow: $black 0px 0px 2px;
 
+    @media screen and (max-width: 1031px) {
+      font-size: 37px;
+    }
+
     @media screen and (max-width: 930px) {
       width: 60%;
     }
 
     @media screen and (max-width: 767px) {
       font-size: $large-font-size;
+      width: 48%;
+    }
+
+    @media screen and (max-width: 590px) {
+      width: 60%;
     }
   }
 }
