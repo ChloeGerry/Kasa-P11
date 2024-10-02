@@ -2,11 +2,10 @@ import { useParams } from "react-router-dom";
 import UnvailableHousing from "@/components/UnvailableHousing";
 import Slideshow from "@/components/Slideshow";
 import Tag from "@/components/Tag";
-import Star from "@/components/Star";
+import Rating from "@/components/Rating";
 import Collapse from "@/components/Collapse";
 import { useHousings } from "@/hooks/useHousings";
 import { HousingType } from "@/hooks/types";
-import { primaryColor, secondaryColor } from "@/services/constants";
 
 const Housing = () => {
   const hostId = useParams();
@@ -61,9 +60,7 @@ const Housing = () => {
               <img className="housing__host--picture" src={housing.host.picture} alt="host" />
             </div>
             <div className="housing__stars--wrapper">
-              {ratings.map((rate) => (
-                <Star key={rate} color={rate <= hostRating ? primaryColor : secondaryColor} />
-              ))}
+              <Rating hostRating={hostRating} ratings={ratings} />
             </div>
           </div>
         </div>
