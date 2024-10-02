@@ -4,7 +4,7 @@
   border-radius: $mobile-border-radius;
   object-fit: cover;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1031px) {
     height: 255px;
     width: 100%;
   }
