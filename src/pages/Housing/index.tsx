@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import Callout from "@/components/Callout";
+import UnvailableHousing from "@/components/UnvailableHousing";
 import Slideshow from "@/components/Slideshow";
 import Tag from "@/components/Tag";
 import Star from "@/components/Star";
@@ -13,11 +13,7 @@ const Housing = () => {
   const housings: HousingType[] | null = useHousings();
 
   if (!housings || !housings.length) {
-    return (
-      <div className="housing__callout--wrapper">
-        <Callout hasRedirection={true} text="Il semble y avoir un problème..." />
-      </div>
-    );
+    return <UnvailableHousing />;
   }
 
   const housing = housings.find((host) => {
@@ -25,11 +21,7 @@ const Housing = () => {
   });
 
   if (!housing) {
-    return (
-      <div className="housing__callout--wrapper">
-        <Callout hasRedirection={true} text="Il semble y avoir un problème..." />
-      </div>
-    );
+    return <UnvailableHousing />;
   }
 
   const hostRating = Number(housing.rating);
@@ -46,11 +38,7 @@ const Housing = () => {
     !housing.equipments ||
     !housing.description
   ) {
-    return (
-      <div className="housing__callout--wrapper">
-        <Callout hasRedirection={true} text="Il semble y avoir un problème..." />
-      </div>
-    );
+    return <UnvailableHousing />;
   }
 
   return (
