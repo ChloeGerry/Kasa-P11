@@ -2,6 +2,7 @@ import Banner from "@/components/Banner";
 import Cards from "@/components/Cards";
 import bannerImage from "@/assets/homepage-banner.jpg";
 import { useHousings } from "@/hooks/useHousings";
+import Callout from "@/components/Callout";
 
 const Home = () => {
   const housings = useHousings();
@@ -14,7 +15,13 @@ const Home = () => {
         image={bannerImage}
         filter="darken"
       />
-      <Cards housings={housings} />
+      {housings ? (
+        <Cards housings={housings} />
+      ) : (
+        <div className="housing__callout--wrapper">
+          <Callout hasRedirection={false} text="Logements indisponible...." color="#61c2cb" />
+        </div>
+      )}
     </main>
   );
 };
