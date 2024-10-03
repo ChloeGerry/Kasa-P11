@@ -6,20 +6,16 @@ type BannerProps = {
 };
 
 const Banner = ({ title, image, margin, filter }: BannerProps) => {
+  const bannerWrapperClass: string =
+    margin === "large" ? "banner__section--large" : "banner__section--medium";
+
+  const bannerImageClass: string =
+    filter === "darken" ? "banner__image--darken" : "banner__image--enlighten";
+
   return (
-    <section
-      className={`banner ${
-        margin === "large" ? "banner__section--large" : "banner__section--medium"
-      }`}
-    >
+    <section className={`banner ${bannerWrapperClass}`}>
       <div className="banner__wrapper">
-        <img
-          src={image}
-          alt="banner"
-          className={`banner__image ${
-            filter === "darken" ? "banner__image--darken" : "banner__image--enlighten"
-          }`}
-        />
+        <img src={image} alt="banner" className={`banner__image ${bannerImageClass}`} />
         {title && <h1 className="banner__title">{title}</h1>}
       </div>
     </section>

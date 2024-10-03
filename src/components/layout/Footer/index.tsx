@@ -1,10 +1,13 @@
 import FooterLogo from "../Logo/FooterLogo";
 
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+
 const Footer = () => {
   return (
     <footer className="footer">
       <FooterLogo />
-      <p className="footer__copyright">© 2020 Kasa. All rights reserved</p>
+      <p className="footer__copyright">© {currentYear} Kasa. All rights reserved</p>
     </footer>
   );
 };
