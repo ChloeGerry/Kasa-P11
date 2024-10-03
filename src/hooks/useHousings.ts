@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { HousingType } from "./types";
 
-export const useHousings = () => {
-  const [housings, setHousings] = useState<HousingType[] | null>([]);
+export const useHousings = (): HousingType[] | null => {
+  const [housings, setHousings] = useState<HousingType[] | null>(null);
+
   const getHousings = async (): Promise<void> => {
     try {
       const result = await fetch("/housings.json");

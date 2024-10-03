@@ -1,29 +1,31 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import UnvailableHousing from "@/components/UnvailableHousing";
-import Slideshow from "@/components/Slideshow";
+import Gallery from "@/components/Gallery";
 import Tag from "@/components/Tag";
 import Rating from "@/components/Rating";
 import Collapse from "@/components/Collapse";
 import { useHousings } from "@/hooks/useHousings";
 import { HousingType } from "@/hooks/types";
+import { useEffect } from "react";
 
 const Housing = () => {
   const hostId = useParams();
+  const navigate = useNavigate();
   const housings: HousingType[] | null = useHousings();
 
-  if (!housings || !housings.length) {
-    return <UnvailableHousing />;
-  }
-
-  const housing = housings.find((host) => {
+  const housing: HousingType | undefined = housings?.find((host) => {
     return host.id === hostId.id;
   });
 
-  if (!housing) {
-    return <UnvailableHousing />;
-  }
+  const isIdNotFound = Array.isArray(housings) && !housing;
 
-  const hostRating = Number(housing.rating);
+  useEffect(() => {
+    if (isIdNotFound) {
+      navigate("/*");
+    }
+  }, [isIdNotFound]);
+
+  const hostRating = Number(housing?.rating);
   let ratings = Array(5).fill(null);
 
   ratings.forEach((_, index) => {
@@ -31,7 +33,7 @@ const Housing = () => {
   });
 
   if (
-    !housing.pictures ||
+    !housing?.pictures ||
     !housing.tags ||
     !housing.host ||
     !housing.equipments ||
@@ -42,7 +44,7 @@ const Housing = () => {
 
   return (
     <main>
-      <Slideshow hostPictures={housing.pictures} />
+      <Gallery hostPictures={housing.pictures} />
       <section className="housing">
         <div className="housing__informations">
           <div>
