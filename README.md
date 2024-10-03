@@ -8,14 +8,14 @@ Versions utilisées :
     yarn : 1.22.21
 
 
-Pour intaller les dépendances :
+Pour installer les dépendances :
 
     yarn ou yarn install
 
 
 Pour lancer le projet en local :
 
-    yarn sass
+    yarn sass&
     yarn dev
 
 
