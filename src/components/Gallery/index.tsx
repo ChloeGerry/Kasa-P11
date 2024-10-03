@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-type SlideshowProps = {
+type GalleryProps = {
   hostPictures: string[];
 };
 
-const Slideshow = ({ hostPictures }: SlideshowProps) => {
+const Gallery = ({ hostPictures }: GalleryProps) => {
   const [index, setIndex] = useState(0);
   let currentIndex = null;
 
@@ -65,4 +65,4 @@ const Slideshow = ({ hostPictures }: SlideshowProps) => {
   );
 };
 
-export default Slideshow;
+export default Gallery;
