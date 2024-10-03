@@ -64,7 +64,7 @@
       flex-direction: column;
       gap: 4px;
       opacity: 1;
-      max-height: 145px;
+      max-height: 255px;
       animation: collapse 350ms ease-in-out;
     }
   }
@@ -114,12 +114,12 @@
   &__wrapper--medium &__text-wrapper {
     padding: $spacing * 3 $spacing * 2 $spacing * 2 $spacing * 2;
     border-radius: 5px;
-    height: 209px;
+    height: 260px;
 
     @media screen and (max-width: 1150px) {
       padding: $spacing * 2 $spacing $spacing $spacing;
       border-radius: 5px;
-      height: fit-content;
+      height: 160px;
     }
   }
 
