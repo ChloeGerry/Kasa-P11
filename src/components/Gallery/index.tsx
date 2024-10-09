@@ -19,12 +19,12 @@ const Gallery = ({ hostPictures }: GalleryProps) => {
   };
 
   return (
-    <section className="slideshow">
+    <section className="gallery">
       {hostPictures.length > 1 && (
         <>
           <svg
             onClick={() => previousPicture()}
-            className="slideshow__arrows slideshow__arrow--left"
+            className="gallery__arrows gallery__arrow--left"
             width="48"
             height="80"
             viewBox="0 0 48 80"
@@ -38,7 +38,7 @@ const Gallery = ({ hostPictures }: GalleryProps) => {
           </svg>
           <svg
             onClick={() => nextPicture()}
-            className="slideshow__arrows slideshow__arrow--right"
+            className="gallery__arrows gallery__arrow--right"
             width="48"
             height="80"
             viewBox="0 0 48 80"
@@ -50,13 +50,13 @@ const Gallery = ({ hostPictures }: GalleryProps) => {
               fill="white"
             />
           </svg>
-          <p className="slideshow__index">
+          <p className="gallery__index">
             {index + 1}/{hostPictures.length}
           </p>
         </>
       )}
       <img
-        className="slideshow__picture"
+        className="gallery__picture"
         key={`${hostPictures[index]}-${index}`}
         src={hostPictures[index]}
         alt="housing"
