@@ -1,5 +1,5 @@
-import { primaryColor, secondaryColor } from "@/services/constants";
 import { Fragment } from "react/jsx-runtime";
+import { primaryColor, secondaryColor } from "@/services/constants";
 
 type RatingProps = {
   ratings: number[];
